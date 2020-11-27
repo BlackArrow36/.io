@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <style>
+        .body{
+            margin-left: auto;
+            margin-right: auto;
+            min-width: 600px;
+            max-width: 800px;
+            background-color: rgb(102, 102, 102);
+			min-height:1000px;
+            height: content;
+        }
+        p{
+            font-family: OctoberCrow;
+            font-size: 28px;
+            color:black;
+            text-shadow: 1px 0px red;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+        *{
+	        margin:0;
+	        padding:0;
+        }
+        .MENU nav {
+            margin-left: auto;
+            margin-right: auto;
+            width:100%;
+            height:40px;
+            background-color:#fff;
+        }
+        .MENU nav ul {
+            float:left;
+            background-color:#333;
+        }
+        .MENU nav ul li {
+            float:left;
+            list-style:none;
+            position:relative;
+        }
+        .MENU nav ul li a {
+            display:block;
+            min-width: 100px;
+            width: fit-content;
+            text-align: center;
+            font-family:OctoberCrow;
+            color:#222;
+            font-size:14px;
+            padding:12px 14px;
+            text-decoration:none;
+            color:white;
+        }
+        .MENU nav ul li ul {
+            display:none;
+            position:absolute;
+            background-color:white;
+            padding:0px;
+            box-shadow:2px 2px 2px 2px;
+        }
+        .MENU nav ul li:hover ul {
+            display:block;
+        }
+        .MENU nav ul li ul li a {
+            width:180px;
+            color:black;
+        }
+        .MENU nav ul li ul li a {
+            padding: 8px 14px;
+        }
+
+        .MENU nav ul li ul li a:hover {
+            background-color:gray;
+        }
+        .MENU nav ul li:hover {
+            background-color:#6a6a6a;
+        }
+        
+
+
+        .menu_inner nav {
+            margin-left: auto;
+            margin-right: auto;
+            width:100%;
+            height:40px;
+            background-color:#fff;
+        }
+        .menu_inner nav ul {
+            float:left;
+            background-color:#333;
+        }
+        .menu_inner nav ul li {
+            float:left;
+            list-style:none;
+            position:relative;
+        }
+        .menu_inner nav ul li a {
+            display:block;
+            width: 140px;
+            text-align: center;
+            font-family:arial;
+            color:#222;
+            font-size:14px;
+            padding:12px 13px;
+            text-decoration:none;
+            color:white;
+        }
+        .menu_inner nav ul li ul {
+            display:none;
+            position:absolute;
+            background-color:white;
+            padding:0px;
+            box-shadow:2px 2px 2px 2px;
+        }
+        .menu_inner nav ul li:hover ul {
+            display:block;
+        }
+        .menu_inner nav ul li ul li a {
+            width:180px;
+            color:black;
+        }
+        .menu_inner nav ul li ul li a {
+            padding: 8px 14px;
+        }
+
+        .menu_inner nav ul li ul li a:hover {
+            background-color:gray;
+        }
+        .menu_inner nav ul li:hover {
+            background-color:#6a6a6a;
+        }
+        body{
+            margin:0px auto;
+            text-align: center;
+            vertical-align: middle;
+        }
+        .top{
+            height: 30px;
+            width: 100%;
+            background-color: gray;
+            position: fixed;
+            z-index: 1;
+        }
+        .MENU{
+            position: absolute;
+            top:0px;
+            left:calc(50% - 128px);
+            z-index: 2;
+        }
+        .div1{
+            height: 375px;
+            width: 700px;
+            background-color: white;
+            margin: 0 auto;
+        }
+        .div2{
+            position: relative;
+            float: left;
+            height: 300px;
+            width: 202px;
+            background-image: url(photos/background.png);
+            background-size: contain;
+            background-position: center;
+        }
+        .div3{
+            position: relative;
+            height: 75px;
+            width: 202px;
+            background-image: url(photos/stats.png);
+            background-size: contain;
+            background-position: center;
+            float: left;
+        }
+        .div23{
+            float:left;
+            width: 202px;
+            height: 375px;
+        }
+        .menu_inner{
+            float:right;
+        }
+        .HP{
+            position: absolute;
+            left:12.5px;
+            top:51.5px;
+            width: 35px;
+            height: 15px;
+        }
+        .HUNGER{
+            position: absolute;
+            left:82.5px;
+            top:51.5px;
+            width: 35px;
+            height: 15px;
+        }
+        .SANITY{
+            position: absolute;
+            left:152.5px;
+            top:51.5px;
+            width: 35px;
+            height: 15px;
+        }
+        .informacje{
+            position: relative;
+            height: 335px;
+            width: 498px;
+            background-image: url(photos/tlo-informacji.jpg);
+            background-position: center;
+            background-size: cover;
+            overflow-y: scroll;
+            float: right;
+        }
+        @font-face{
+            font-family:'OctoberCrow';
+            src:url(OctoberCrow.ttf) format('truetype');
+        }
+    </style>
+</head>
+<body style="z-index:-2;background-image: url(photos/tlo.jpg);background-attachment: fixed;background-repeat: no-repeat;background-size:cover;background-position: bottom;">
+    <div style="width:100%;height:100%;z-index:-2;background-image: url(photos/tlo.jpg);background-attachment: fixed;"></div>
+    <div class="top">
+        <div class="MENU">
+            <nav>
+                <ul>
+                    <li><a href="dst-Rozbitkowie.html">Home</a></li>
+                </ul>
+            </nav>
+        </div>    
+    </div>
+    <div class="body">  
+        <div style="height:60px;width:100%"></div>
+
+        <p style='font: 90px"OctoberCrow"'>Wilson</p>
+        <div class="div1">
+            <div class="div23">
+                <div class="div2">
+                    <img src="photos/Rozbitkowie/Wilson.png" width="200px" height="300px"/>
+                </div>
+                <div class="div3">
+                    <div class="HP">150</div>
+                    <div class="HUNGER">150</div>
+                    <div class="SANITY">100</div>
+                </div>
+                <div></div>
+            </div>
+            <div class="menu_inner">
+                <nav>
+                    <ul>
+                        <li><a onclick="WilsonPlus()">+ Plusy</a></li>
+                        <li><a onclick="WilsonMinus()">- Minusy</a></li>
+                        <li><a onclick="WilsonZmiany()">Zmiany</a></li>
+                    </ul>
+                </nav>
+                <div class="informacje" id="infoWilson"></div>
+            </div>
+        </div>
+
+        <div style="height:60px;width:100%"></div>
+
+        <p style='font: 90px"OctoberCrow"'>Willow</p>
+        <div class="div1">
+            <div class="div23">
+                <div class="div2">
+                    <img src="photos/Rozbitkowie/Willow.png" width="200px" height="300px"/>
+                </div>
+                <div class="div3">
+                    <div class="HP">150</div>
+                    <div class="HUNGER">150</div>
+                    <div class="SANITY">120</div>
+                </div>
+                <div></div>
+            </div>
+            <div class="menu_inner">
+                <nav>
+                    <ul>
+                        <li><a onclick="WillowPlus()">+ Plusy</a></li>
+                        <li><a onclick="WillowMinus()">- Minusy</a></li>
+                        <li><a onclick="WillowZmiany()">Zmiany</a></li>
+                    </ul>
+                </nav>
+                <div class="informacje" id="infoWillow"></div>
+            </div>
+        </div>
+
+        <div style="height:60px;width:100%"></div>
+
+        <p style='font: 90px"OctoberCrow"'>Wolfgang</p>
+        <div class="div1">
+            <div class="div23">
+                <div class="div2">
+                    <img src="photos/Rozbitkowie/Wolfgang.png" width="200px" height="300px"/>
+                </div>
+                <div class="div3">
+                    <div class="HP">200</div>
+                    <div class="HUNGER">300</div>
+                    <div class="SANITY">150</div>
+                </div>
+                <div></div>
+            </div>
+            <div class="menu_inner">
+                <nav>
+                    <ul>
+                        <li><a onclick="WolfgangPlus()">+ Plusy</a></li>
+                        <li><a onclick="WolfgangMinus()">- Minusy</a></li>
+                        <li><a onclick="WolfgangZmiany()">Zmiany</a></li>
+                    </ul>
+                </nav>
+                <div class="informacje" id="infoWolfgang"></div>
+            </div>
+        </div>
+
+        <div style="height:60px;width:100%"></div>
+
+        <p style='font: 90px"OctoberCrow"'>Wendy</p>
+        <div class="div1">
+            <div class="div23">
+                <div class="div2">
+                    <img src="photos/Rozbitkowie/Wendy.png" width="200px" height="300px"/>
+                </div>
+                <div class="div3">
+                    <div class="HP">150</div>
+                    <div class="HUNGER">150</div>
+                    <div class="SANITY">150</div>
+                </div>
+                <div></div>
+            </div>
+            <div class="menu_inner">
+                <nav>
+                    <ul>
+                        <li><a onclick="WendyPlus()">+ Plusy</a></li>
+                        <li><a onclick="WendyMinus()">- Minusy</a></li>
+                        <li><a onclick="WendyZmiany()">Zmiany</a></li>
+                    </ul>
+                </nav>
+                <div class="informacje" id="infoWendy"></div>
+            </div>
+        </div>
+
+        <div style="height:60px;width:100%"></div>
+
+        <p style='font: 90px"OctoberCrow"'>WX-78</p>
+        <div class="div1">
+            <div class="div23">
+                <div class="div2">
+                    <img src="photos/Rozbitkowie/WX-78.png" width="200px" height="300px"/>
+                </div>
+                <div class="div3">
+                    <div class="HP">150</div>
+                    <div class="HUNGER">150</div>
+                    <div class="SANITY">150</div>
+                </div>
+                <div></div>
+            </div>
+            <div class="menu_inner">
+                <nav>
+                    <ul>
+                        <li><a onclick="WXPlus()">+ Plusy</a></li>
+                        <li><a onclick="WXMinus()">- Minusy</a></li>
+                        <li><a onclick="WXZmiany()">Zmiany</a></li>
+                    </ul>
+                </nav>
+                <div class="informacje" id="infoWX"></div>
+            </div>
+        </div>
+
+        <div style="height:60px;width:100%"></div>
+
+        <p style='font: 90px"OctoberCrow"'>Wickerbottom</p>
+        <div class="div1">
+            <div class="div23">
+                <div class="div2">
+                    <img src="photos/Rozbitkowie/Wickerbottom.png" width="200px" height="300px"/>
+                </div>
+                <div class="div3">
+                    <div class="HP">150</div>
+                    <div class="HUNGER">150</div>
+                    <div class="SANITY">250</div>
+                </div>
+                <div></div>
+            </div>
+            <div class="menu_inner">
+                <nav>
+                    <ul>
+                        <li><a onclick="WickerPlus()">+ Plusy</a></li>
+                        <li><a onclick="WickerMinus()">- Minusy</a></li>
+                        <li><a onclick="WickerZmiany()">Zmiany</a></li>
+                    </ul>
+                </nav>
+                <div class="informacje" id="infoWicker"></div>
+            </div>
+        </div>
+
+        <div style="height:60px;width:100%"></div>
+
+        <p style='font: 90px"OctoberCrow"'>Woodie</p>
+        <div class="div1">
+            <div class="div23">
+                <div class="div2">
+                    <img src="photos/Rozbitkowie/Woodie.png" width="200px" height="300px"/>
+                </div>
+                <div class="div3">
+                    <div class="HP">150</div>
+                    <div class="HUNGER">150</div>
+                    <div class="SANITY">200</div>
+                </div>
+                <div></div>
+            </div>
+            <div class="menu_inner">
+                <nav>
+                    <ul>
+                        <li><a onclick="WoodiePlus()">+ Plusy</a></li>
+                        <li><a onclick="WoodieMinus()">- Minusy</a></li>
+                        <li><a onclick="WoodieZmiany()">Zmiany</a></li>
+                    </ul>
+                </nav>
+                <div class="informacje" id="infoWoodie"></div>
+            </div>
+        </div>
+
+        <div style="height:60px;width:100%"></div>
+
+        <p style='font: 90px"OctoberCrow"'>Wes</p>
+        <div class="div1">
+            <div class="div23">
+                <div class="div2">
+                    <img src="photos/Rozbitkowie/Wes.png" width="200px" height="300px"/>
+                </div>
+                <div class="div3">
+                    <div class="HP">113</div>
+                    <div class="HUNGER">113</div>
+                    <div class="SANITY">150</div>
+                </div>
+                <div></div>
+            </div>
+            <div class="menu_inner">
+                <nav>
+                    <ul>
+                        <li><a onclick="WesPlus()">+ Plusy</a></li>
+                        <li><a onclick="WesMinus()">- Minusy</a></li>
+                        <li><a onclick="WesZmiany()">Zmiany</a></li>
+                    </ul>
+                </nav>
+                <div class="informacje" id="infoWes"></div>
+            </div>
+        </div>
+
+        <div style="height:60px;width:100%"></div>
+        
+        <p style='font: 90px"OctoberCrow"'>Maxwell</p>
+        <div class="div1">
+            <div class="div23">
+                <div class="div2">
+                    <img src="photos/Rozbitkowie/Maxwell.png" width="200px" height="300px"/>
+                </div>
+                <div class="div3">
+                    <div class="HP">75</div>
+                    <div class="HUNGER">150</div>
+                    <div class="SANITY">200</div>
+                </div>
+                <div></div>
+            </div>
+            <div class="menu_inner">
+                <nav>
+                    <ul>
+                        <li><a onclick="MaxwellPlus()">+ Plusy</a></li>
+                        <li><a onclick="MaxwellMinus()">- Minusy</a></li>
+                        <li><a onclick="MaxwellZmiany()">Zmiany</a></li>
+                    </ul>
+                </nav>
+                <div class="informacje" id="infoMaxwell"></div>
+            </div>
+        </div>
+
+        <div style="height:60px;width:100%"></div>
+ 
+        <p style='font: 90px"OctoberCrow"'>Wigfrid</p>
+        <div class="div1">
+            <div class="div23">
+                <div class="div2">
+                    <img src="photos/Rozbitkowie/Wigfrid.png" width="200px" height="300px"/>
+                </div>
+                <div class="div3">
+                    <div class="HP">120</div>
+                    <div class="HUNGER">120</div>
+                    <div class="SANITY">120</div>
+                </div>
+                <div></div>
+            </div>
+            <div class="menu_inner">
+                <nav>
+                    <ul>
+                        <li><a onclick="WigfridPlus()">+ Plusy</a></li>
+                        <li><a onclick="WigfridMinus()">- Minusy</a></li>
+                        <li><a onclick="WigfridZmiany()">Zmiany</a></li>
+                    </ul>
+                </nav>
+                <div class="informacje" id="infoWigfrid"></div>
+            </div>
+        </div>
+
+        <div style="height:60px;width:100%"></div>
+
+        <p style='font: 90px"OctoberCrow"'>Webber</p>
+        <div class="div1">
+            <div class="div23">
+                <div class="div2">
+                    <img src="photos/Rozbitkowie/Webber.png" width="200px" height="300px"/>
+                </div>
+                <div class="div3">
+                    <div class="HP">175</div>
+                    <div class="HUNGER">175</div>
+                    <div class="SANITY">100</div>
+                </div>
+                <div></div>
+            </div>
+            <div class="menu_inner">
+                <nav>
+                    <ul>
+                        <li><a onclick="WebberPlus()">+ Plusy</a></li>
+                        <li><a onclick="WebberMinus()">- Minusy</a></li>
+                        <li><a onclick="WebberZmiany()">Zmiany</a></li>
+                    </ul>
+                </nav>
+                <div class="informacje" id="infoWebber"></div>
+            </div>
+        </div>
+
+        <div style="height:60px;width:100%"></div>
+
+        <p style='font: 90px"OctoberCrow"'>Winona</p>
+        <div class="div1">
+            <div class="div23">
+                <div class="div2">
+                    <img src="photos/Rozbitkowie/Winona.png" width="200px" height="300px"/>
+                </div>
+                <div class="div3">
+                    <div class="HP">150</div>
+                    <div class="HUNGER">150</div>
+                    <div class="SANITY">200</div>
+                </div>
+                <div></div>
+            </div>
+            <div class="menu_inner">
+                <nav>
+                    <ul>
+                        <li><a onclick="WinonaPlus()">+ Plusy</a></li>
+                        <li><a onclick="WinonaMinus()">- Minusy</a></li>
+                        <li><a onclick="WinonaZmiany()">Zmiany</a></li>
+                    </ul>
+                </nav>
+                <div class="informacje" id="infoWinona"></div>
+            </div>
+        </div>
+
+        <div style="height:60px;width:100%"></div>
+
+        <p style='font: 90px"OctoberCrow"'>Warly</p>
+        <div class="div1">
+            <div class="div23">
+                <div class="div2">
+                    <img src="photos/Rozbitkowie/Warly.png" width="200px" height="300px"/>
+                </div>
+                <div class="div3">
+                    <div class="HP">150</div>
+                    <div class="HUNGER">250</div>
+                    <div class="SANITY">200</div>
+                </div>
+                <div></div>
+            </div>
+            <div class="menu_inner">
+                <nav>
+                    <ul>
+                        <li><a onclick="WarlyPlus()">+ Plusy</a></li>
+                        <li><a onclick="WarlyMinus()">- Minusy</a></li>
+                        <li><a onclick="WarlyZmiany()">Zmiany</a></li>
+                    </ul>
+                </nav>
+                <div class="informacje" id="infoWarly"></div>
+            </div>
+        </div>
+
+        <div style="height:60px;width:100%"></div>
+
+        <p style='font: 90px"OctoberCrow"'>Wortox</p>
+        <div class="div1">
+            <div class="div23">
+                <div class="div2">
+                    <img src="photos/Rozbitkowie/Wortox.png" width="200px" height="300px"/>
+                </div>
+                <div class="div3">
+                    <div class="HP">200</div>
+                    <div class="HUNGER">150</div>
+                    <div class="SANITY">150</div>
+                </div>
+                <div></div>
+            </div>
+            <div class="menu_inner">
+                <nav>
+                    <ul>
+                        <li><a onclick="WortoxPlus()">+ Plusy</a></li>
+                        <li><a onclick="WortoxMinus()">- Minusy</a></li>
+                        <li><a onclick="WortoxZmiany()">Zmiany</a></li>
+                    </ul>
+                </nav>
+                <div class="informacje" id="infoWortox"></div>
+            </div>
+        </div>
+
+        <div style="height:60px;width:100%"></div>
+
+        <p style='font: 90px"OctoberCrow"'>Wormwood</p>
+        <div class="div1">
+            <div class="div23">
+                <div class="div2">
+                    <img src="photos/Rozbitkowie/Wormwood.png" width="200px" height="300px"/>
+                </div>
+                <div class="div3">
+                    <div class="HP">150</div>
+                    <div class="HUNGER">150</div>
+                    <div class="SANITY">200</div>
+                </div>
+                <div></div>
+            </div>
+            <div class="menu_inner">
+                <nav>
+                    <ul>
+                        <li><a onclick="WormwoodPlus()">+ Plusy</a></li>
+                        <li><a onclick="WormwoodMinus()">- Minusy</a></li>
+                        <li><a onclick="WormwoodZmiany()">Zmiany</a></li>
+                    </ul>
+                </nav>
+                <div class="informacje" id="infoWormwood"></div>
+            </div>
+        </div>
+
+        <div style="height:60px;width:100%"></div>
+        
+        <p style='font: 90px"OctoberCrow"'>Wurt</p>
+        <div class="div1">
+            <div class="div23">
+                <div class="div2">
+                    <img src="photos/Rozbitkowie/Wurt.png" width="200px" height="300px"/>
+                </div>
+                <div class="div3">
+                    <div class="HP">150</div>
+                    <div class="HUNGER">200</div>
+                    <div class="SANITY">150</div>
+                </div>
+                <div></div>
+            </div>
+            <div class="menu_inner">
+                <nav>
+                    <ul>
+                        <li><a onclick="WurtPlus()">+ Plusy</a></li>
+                        <li><a onclick="WurtMinus()">- Minusy</a></li>
+                        <li><a onclick="WurtZmiany()">Zmiany</a></li>
+                    </ul>
+                </nav>
+                <div class="informacje" id="infoWurt"></div>
+            </div>
+        </div>
+
+        <div style="height:60px;width:100%"></div>
+        
+        <p style='font: 90px"OctoberCrow"'>Walter</p>
+        <div class="div1">
+            <div class="div23">
+                <div class="div2">
+                    <img src="photos/Rozbitkowie/Walter.png" width="200px" height="300px"/>
+                </div>
+                <div class="div3">
+                    <div class="HP">150</div>
+                    <div class="HUNGER">150</div>
+                    <div class="SANITY">200</div>
+                </div>
+                <div></div>
+            </div>
+            <div class="menu_inner">
+                <nav>
+                    <ul>
+                        <li><a onclick="WalterPlus()">+ Plusy</a></li>
+                        <li><a onclick="WalterMinus()">- Minusy</a></li>
+                        <li><a onclick="WalterZmiany()">Zmiany</a></li>
+                    </ul>
+                </nav>
+                <div class="informacje" id="infoWalter"></div>
+            </div>
+        </div>
+
+        <div style="height:60px;width:100%"></div>
+    </div>
+    
+
+
+    <script>
+        function WilsonPlus(){
+            el=document.getElementById("infoWilson")
+            el.innerHTML=""
+            el.innerHTML="<p>Wilson is a basic character</p><p>Wilson grows a beard, that protects him from cold</p><p>Wilson can shave to get beard hair</p>"
+        }
+        function WilsonMinus(){
+            el=document.getElementById("infoWilson")
+            el.innerHTML=""
+            el.innerHTML="<p>Wiloson will overheat faster come summer, when he has his beard</p>"
+        }
+        function WilsonZmiany(){
+            el=document.getElementById("infoWilson")
+            el.innerHTML=""
+            el.innerHTML='<p>Wilson is immune to Grue, he does not get hit while it is dark</p>';
+        }
+        function WillowPlus(){
+            el=document.getElementById("infoWillow")
+            el.innerHTML=""
+            el.innerHTML="<p>Willow has her lovely lighter</p><p>Willow is immune to firedamage</p><p>Willow takes longer to overheat</p><p>Willow gains sanity while close to fire</p><p>Willow has her friend Bernie</p><p>Bernie will become active when someone nearby is insane</p><p>Bernie having 2000HP and atacking enemies for 50 DMG will help you kill nightmares and other monsters</p>"
+        }
+        function WillowMinus(){
+            el=document.getElementById("infoWillow")
+            el.innerHTML=""
+            el.innerHTML="<p>Willow suffers way more from freezing than any other character</p><p>Willow gets reduced protection from cold from clothes</p><p>Willow will lose sanity 10% faster</p>"
+        }
+        function WillowZmiany(){
+            el=document.getElementById("infoWillow")
+            el.innerHTML=""
+            el.innerHTML='<p>Willow has Fire Attacks </p>';
+        }
+        function WolfgangPlus(){
+            el=document.getElementById("infoWolfgang")
+            el.innerHTML=""
+            el.innerHTML="<p>Wolfgang has a damage multiplier based on the state of his belly</p><p>Wolfgang gains damage linearly from 2 x damage on 300 hunger to 0.5 x damage on empty belly</p><p>When Wolfgang is in his mighty form (over 220 hunger), he can gain up to a 25% speed buff based on his hunger level</p><p>Wolfgang has 200 base health(Stands at 200 max in his normal form) which goes up to 300 while on full belly</p>"
+        }
+        function WolfgangMinus(){
+            el=document.getElementById("infoWolfgang")
+            el.innerHTML=""
+            el.innerHTML="<p>Eventhough Wolfgang is a mighty man, he still is afraid of monsters and the dark losing 10% more sanity from these sources</p><p>Wolfgang's changes take few seconds making him vulnerable to enemy atacks</p><p>Wolfgangs health will go down to 150 max on empty belly</p><p>Wolfgangs speed will decrease down to 0.9 on empty stomach</p><p>Wolfgangs damage will also suffer from lack of food going down to 0.75 x damage</p><p>Wolfgangs has a higher metabolism from 3 x the speed down to 1.5 x the speed in his mighty form</p><p>Wolfgang has 1.5 higher metabolism in his normal form ( 100 - 225 hunger )</p><p>Wolfgangs metabolism goes from 1.5 down to 1.0 in his Wimpy form</p>"
+        }
+        function WolfgangZmiany(){
+            el=document.getElementById("infoWolfgang")
+            el.innerHTML=""
+            el.innerHTML='<p>Eating Spoiled Food doesn\'t have negative effects on Wolfgang</p>';
+        }
+        function WendyPlus(){
+            el=document.getElementById("infoWendy")
+            el.innerHTML=""
+            el.innerHTML="<p>Wendy can summon her dead twin sister Abigail that can fight with Wendy dealing area damage</p><p>Abigail does more damage come dusk and does highest damage come night time</p><p>Abigail has 3 stages, 1st 150HP, 2nd 300HP, 3rd 600HP</p><p>Wendy can speed up the process of upgrading Abigail with a special structure and filling it with flower petals</p><p>Wendy is immune to bad effects of ghosts</p><p>Wendy has a special tab, where she can create potions for her sister, using flowers gained from assisting a friendly ghost</p><p>Wendy loses 25% less sanity from darkness and insanity auras(doesn't apply to food and items)</p>"
+        }
+        function WendyMinus(){
+            el=document.getElementById("infoWendy")
+            el.innerHTML=""
+            el.innerHTML="<p>Wendy does 25% less damage</p><p>Wendy loses 30 Sanity when her sister dies or is taken back to her flower</p>"
+        }
+        function WendyZmiany(){
+            el=document.getElementById("infoWendy")
+            el.innerHTML=""
+            el.innerHTML='<p>Wendy has a negative sanity aura</p>';
+        }
+        function WXPlus(){
+            el=document.getElementById("infoWX")
+            el.innerHTML=""
+            el.innerHTML="<p>WX can eat food that is spoiled without any drawbacks</p><p>WX-78 gets charged with lightnings giving him additional 50% speed, immunity to freezing and makes WX-78 emit some light around him<p><p>WX-78 will get healed for 100HP when struck by a lightning</p><p>WX-78 gets additional max stats with gears(20 HP, 6.66 Hunger, 13.33 Sanity to get to max of 400 HP, 200 Hunger, 300 Sanity)</p>"
+        }
+        function WXMinus(){
+            el=document.getElementById("infoWX")
+            el.innerHTML=""
+            el.innerHTML="<p>WX-78 loses 0.5 HP per sec when it is raining</p><p>WX-78 loses 0.05 to 0.5 HP per sec when wet(higher wettnes higher loss)</p><p>Getting struck by lightning costs 33 Sanity</p>"
+        }
+        function WXZmiany(){
+            el=document.getElementById("infoWX")
+            el.innerHTML=""
+            el.innerHTML='';
+        }
+        function WickerPlus(){
+            el=document.getElementById("infoWicker")
+            el.innerHTML=""
+            el.innerHTML="<p>Wickerbottom can create her own magical books in her special book's tab</p><p>Wickerbottom can craft items from the first Science tab</p>"
+        }
+        function WickerMinus(){
+            el=document.getElementById("infoWicker")
+            el.innerHTML=""
+            el.innerHTML="<p>Wickerbottom cannot sleep, meaning she cannot sleep in tents, use siesta nor any other kind of sleep</p><p>Reading books will cost Wickerbottom 33 or 50 Sanity</p><p>Wickerbottom doesnt like spoilage losing more sanity from stale and spoiled food</p>"
+        }
+        function WickerZmiany(){
+            el=document.getElementById("infoWicker")
+            el.innerHTML=""
+            el.innerHTML='<p>Wickerbottom has a Level 1 Magic</p>';
+        }
+        function WoodiePlus(){
+            el=document.getElementById("infoWoodie")
+            el.innerHTML=""
+            el.innerHTML="<p>Woodie has his lovely axe that has infinite uses</p><p>Woodie has a 50% higher chance to summon treeguards</p><p>Woodie can become a Werebeaver / Weremoose / Weregoose after eating two monster meat or his specially crafted Kitschy Idols to start a chosen change</p><p>Animals such as pigs bunnymen and rock lobsters will follow you for longer</p><p>Woodie takes a little longer for Woodie to suffer from cold</p>"
+        }
+        function WoodieMinus(){
+            el=document.getElementById("infoWoodie")
+            el.innerHTML=""
+            el.innerHTML="<p>Woodie will always change come a full moon</p><p>After becoming human again woodie will be on 0 Hunger</p><p>When in animal form Woodie has no access to his inventory</p>"
+        }
+        function WoodieZmiany(){
+            el=document.getElementById("infoWoodie")
+            el.innerHTML=""
+            el.innerHTML='<p>Woodie can plant seeds in the ground</p>';
+        }
+        function WesPlus(){
+            el=document.getElementById("infoWes")
+            el.innerHTML=""
+            el.innerHTML="<p>Wes can create ballons costing him 5 Sanity</p><p>Ballons can distract enemies</p><p>Ballons can be popped to deal 5 damage to any targer around the balloon</p><p>Balloons can pop in a chain reaction</p>"
+        }
+        function WesMinus(){
+            el=document.getElementById("infoWes")
+            el.innerHTML=""
+            el.innerHTML="<p>Wes does 75% damage</p><p>Wes drains hunger 25% faster</p><p>Wes is mute so no warning will pop up to warn about incoming hounds etc.</p>"
+        }
+        function WesZmiany(){
+            el=document.getElementById("infoWes")
+            el.innerHTML=""
+            el.innerHTML='<p>Wes has a medium negative sanity aura</p><p>Wes regenerates Sanity Faste</p>';
+        }
+        function MaxwellPlus(){
+            el=document.getElementById("infoMaxwell")
+            el.innerHTML=""
+            el.innerHTML="<p>Maxwell can split his mind into pieces creating slave clones who work for him</p><p>Maxwell gets 6.75 Sanity per minute </p>"
+        }
+        function MaxwellMinus(){
+            el=document.getElementById("infoMaxwell")
+            el.innerHTML=""
+            el.innerHTML="<p>Maxwell has very low Health</p>"
+        }
+        function MaxwellZmiany(){
+            el=document.getElementById("infoMaxwell")
+            el.innerHTML=""
+            el.innerHTML='<p>Maxwell moves faster when he has free inventory slots</p>';
+        }
+        function WigfridPlus(){
+            el=document.getElementById("infoWigfrid")
+            el.innerHTML=""
+            el.innerHTML="<p>Wigfrid can craft special Battle Spear and Battle Helm</p><p>Wigfrid absorbs health and sanity from fallen foes</p><p>Wigfrid does 25% more damage</p><p>Wigfrid takes 25% less damage</p><p>In battle wigfrid activates inspiration allowing her to perform Battle Songs giving everyone around bonuses</p>"
+        }
+        function WigfridMinus(){
+            el=document.getElementById("infoWigfrid")
+            el.innerHTML=""
+            el.innerHTML="<p>Wigfrid only eats meat</p><p>Wigfrid has low hunger<p>"
+        }
+        function WigfridZmiany(){
+            el=document.getElementById("infoWigfrid")
+            el.innerHTML=""
+            el.innerHTML='Wigfrid has electrical attacks';
+        }
+        function WebberPlus(){
+            el=document.getElementById("infoWebber")
+            el.innerHTML=""
+            el.innerHTML="<p>Webber is a friend to spiders, he can befiend them with a piece of meat</p><p>Webber can grow a silky beard that protects from freezing and causes faster overheating, shaving it gives 10 Sanity and silk</p><p>Webber can ear monster meat without any drawbacks</p>"
+        }
+        function WebberMinus(){
+            el=document.getElementById("infoWebber")
+            el.innerHTML=""
+            el.innerHTML="<p>Webber is a monster and will be atacked by pigs, bunnymen, catcoons</p><p>Webber cannot befiend pigs, catcoons nor bunnymen</p>"
+        }
+        function WebberZmiany(){
+            el=document.getElementById("infoWebber")
+            el.innerHTML=""
+            el.innerHTML='Webber is no longer hated by pigs, bunnymen and catcoons';
+        }
+        function WinonaPlus(){
+            el=document.getElementById("infoWinona")
+            el.innerHTML=""
+            el.innerHTML="<p>Winona crafts and places items 2 times faster at a cost of 5 hunger (stops at 50)</p><p>Winona doesn't take the first atack from the dark</p><p>Winona can craft special structures in her very own structure tab</p>"
+        }
+        function WinonaMinus(){
+            el=document.getElementById("infoWinona")
+            el.innerHTML=""
+            el.innerHTML="<p>Winona crafts very slowly once she gets lower than 50 Hunger</p><p>If Winona doesn't craft anything in the last minute, she will lose 5 hunger</p>"
+        }
+        function WinonaZmiany(){
+            el=document.getElementById("infoWinona")
+            el.innerHTML=""
+            el.innerHTML='<p>Wiona builds fast without any additional hunger cost</p><p>Wiona creates more durable items</p>';
+        }
+        function WarlyPlus(){
+            el=document.getElementById("infoWarly")
+            el.innerHTML=""
+            el.innerHTML="<p>Warly has a portable craft pot</p><p>Warly can craft special cooking crafts</p><p>Warly can cook special dishes</p><p>Warly can craft seasonings upgrading dishes</p><p>Warly will cook food 2 times faster</p>"
+        }
+        function WarlyMinus(){
+            el=document.getElementById("infoWarly")
+            el.innerHTML=""
+            el.innerHTML="<p>Warly can only eat cooked dishes</p><p>Warly has 20% higher hunger drain</p><p>Warly gets less benefits from food he ate in the last 2 days (10/20/35/50/70/70... % penalty)</p>"
+        }
+        function WarlyZmiany(){
+            el=document.getElementById("infoWarly")
+            el.innerHTML=""
+            el.innerHTML='<p>Warly now remembers the taste of food he ate for only 1 day</p><p>Warly can plant his own garden of seeds in the ground</p>';
+        }
+        function WortoxPlus(){
+            el=document.getElementById("infoWortox")
+            el.innerHTML=""
+            el.innerHTML="<p>Wortox gets souls from fallen enemies</p><p>Wortox can teleport using one soul to any visible location</p><p>Wortox can release the soul to heal nearby allies for 20hp(goes down depending on the ammount of people around[up to 8 players][each person gets healed for (21 -- amount of players), even when they are full on health])</p><p>Wortox can eat souls to get 18 Hunger for 5 sanity</p>"
+        }
+        function WortoxMinus(){
+            el=document.getElementById("infoWortox")
+            el.innerHTML=""
+            el.innerHTML="<p>Wortox is a monster and will be atacked by pigs, bunnymen and catcoons</p><p>Wortox cannot befriend catcoons, pigs and bunnymen</p><p>Wortox gets 50% of food values</p><p>Wortox can hold up to 20 souls and will lose 20 sanity and drop half of souls </p>"
+        }
+        function WortoxZmiany(){
+            el=document.getElementById("infoWortox")
+            el.innerHTML=""
+            el.innerHTML='<p>Wortox can now hold 35 souls</p>';
+        }
+        function WormwoodPlus(){
+            el=document.getElementById("infoWormwood")
+            el.innerHTML=""
+            el.innerHTML="<p>Wormwood can craft a living log at a cost of 20 HP</p><p>Wormwood can craft his exclusive armor called \"Bramble Husk\" that deals damage to all nearby enemies</p><p>Wormwood can also craft a trap that does area damage upon activation</p><p>Wormwood can craft a compost wrap that heals him for 30 HP</p><p>Wormwood can plant seeds on the ground</p><p>Wormwood gains 10 Sanity from planting</p><p>Wormwood can use manure or bucket-o-poop to regenerate 2HP</p><p>Wormwood will bloom in spring gaining additional movement speed</p><p>Eyeplants and Sea Weeds won't atack Wormwood</p><p>Food does not harm Wormwood (He will not take damage from monster meat etc.)</p>"
+        }
+        function WormwoodMinus(){
+            el=document.getElementById("infoWormwood")
+            el.innerHTML=""
+            el.innerHTML="<p>Wormwood doesn't get any healing effects from food</p><p>In spring when Wormwood is blooming he will have increased hunger drain up to 2 times faster</p><p>Wormwood will lose sanity from destroyed nearby plants (-2 from burned trees,flowers etc, -2 from falling trees, -5 from picking flowers and digging up things, -15 for chopping any kind of tree)</p><p>Wormwood takes 25% more damage from fire and will burn longer</p>"
+        }
+        function WormwoodZmiany(){
+            el=document.getElementById("infoWormwood")
+            el.innerHTML=""
+            el.innerHTML='Wormwood has a pasive health regeneration of 1 per 5 sec';
+        }
+        function WurtPlus(){
+            el=document.getElementById("infoWurt")
+            el.innerHTML=""
+            el.innerHTML="<p>Wurt can create the King of the Merms</p><p>Wurt and other Merm gets increased stats upon creating the Merm King</p><p>Wurt can create Merm houses and Merm Flort-ifications, which house Loyal Merm Guards</p><p>She can befriend Merm, who will mine, chop, fight for her</p><p>She can create Cleaver Disguise, that protects others from Merms</p><p>Wurt can craft Marsh Turf that increases her movementspeed by 30%</p><p>Wurt knows where the tentacles are highligting them for the player</p><p>She will not drop tools while wet</p><p>She can read books but she will not trigger the effect but get some sanity for Birds of the world(+50), On Tentacles(+50), Sleepytime Stories(+33), The End is Nigh!(-33), Applied Horticulture(-33)</p>"
+        }
+        function WurtMinus(){
+            el=document.getElementById("infoWurt")
+            el.innerHTML=""
+            el.innerHTML="<p>Wurt can't eat any meat related items nor eggs</p><p>Pigs will atack her on sight</p><p>Wurt will lose 3.3 sanity when holding living fish and 4.4 while holding dead or spoiled fish</p>"
+        }
+        function WurtZmiany(){
+            el=document.getElementById("infoWurt")
+            el.innerHTML=""
+            el.innerHTML='<p>Wurt remained unchanged</p>';
+        }
+        function WalterPlus(){
+            el=document.getElementById("infoWalter")
+            el.innerHTML=""
+            el.innerHTML="<p>Walter has his four legged friend Woby that is a walking chest,which can be changed into his bigger form using monster meat</p><p>Walter can use his slingshot to atack enemies from a distance</p><p>Walter can tell scary stories near firepits to give all listeners a sanity buff</p><p>Walter isn't scared and won't lose any sanity from monsters nor the dark</p><p>Walter can create his very own Camper's Tent</p><p>Walter loses half the amount of Hunger when sleeping</p><p>When around more than 5 trees, walter will receive a Sanity buff</p><p>Walter cooks food faster and can use Willow's Lighter to cook food</p><p>Walter can craft a Pinetree Pioneer Hat that reduces Sanity lost from atacks by 50%</p>"
+        }
+        function WalterMinus(){
+            el=document.getElementById("infoWalter")
+            el.innerHTML=""
+            el.innerHTML="<p>Walter loses sanity (damage taken x 2[Starving, Overheating and Freezing are exeptions]) when he loses health</p><p>Walter takes 10 more damage from bees</p><p>Walter loses sanity (up to 12/min)when he isn't full on health</p><p>Walter cannot adopt another pet</p><p>Walter doesn't get any sanity from clothing items</p>"
+        }
+        function WalterZmiany(){
+            el=document.getElementById("infoWalter")
+            el.innerHTML=""
+            el.innerHTML='<p>Walter knows how to add fuel in a way that it burns for longer</p>';
+        }
+    </script>
+</body>
+</html>

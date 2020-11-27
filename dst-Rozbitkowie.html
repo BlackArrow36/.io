@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <style>
+        .body{
+            margin-left: auto;
+            margin-right: auto;
+            min-width: 600px;
+            max-width: 800px;
+            background-color: rgb(102, 102, 102);
+			min-height:1000px;
+            height: content;
+        }
+        p{
+            font-family: OctoberCrow;
+            font-size: 28px;
+            color:black;
+            text-shadow: 1px 0px red;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+        *{
+	        margin:0;
+	        padding:0;
+        }
+        body{
+            margin:0px auto;
+            text-align: center;
+            vertical-align: middle;
+        }
+        .top{
+            height: 30px;
+            width: 100%;
+            background-color: gray;
+            position: fixed;
+            z-index: 1;
+        }
+        .MENU{
+            position: absolute;
+            top:0px;
+            left:calc(50% - 128px);
+            z-index: 2;
+        }
+        .MENU nav {
+            margin-left: auto;
+            margin-right: auto;
+            width:100%;
+            height:40px;
+            background-color:#fff;
+        }
+        .MENU nav ul {
+            float:left;
+            background-color:#333;
+        }
+        .MENU nav ul li {
+            float:left;
+            list-style:none;
+            position:relative;
+        }
+        .MENU nav ul li a {
+            display:block;
+            min-width: 100px;
+            width: fit-content;
+            text-align: center;
+            font-family:arial;
+            color:#222;
+            font-family: OctoberCrow;
+            font-size:14px;
+            padding:12px 14px;
+            text-decoration:none;
+            color:white;
+        }
+        .MENU nav ul li ul {
+            display:none;
+            position:absolute;
+            background-color:white;
+            padding:0px;
+            box-shadow:2px 2px 2px 2px;
+        }
+        .MENU nav ul li:hover ul {
+            display:block;
+        }
+        .MENU nav ul li ul li a {
+            width:180px;
+            color:black;
+        }
+        .MENU nav ul li ul li a {
+            padding: 8px 14px;
+        }
+
+        .MENU nav ul li ul li a:hover {
+            background-color:gray;
+        }
+        .MENU nav ul li:hover {
+            background-color:#6a6a6a;
+        }
+        @font-face{
+            font-family:'OctoberCrow';
+            src:url(OctoberCrow.ttf) format('truetype');
+        }
+        .rzeczy{
+            width: calc(100% - 200px);
+            height: fit-content;
+            text-align: center;
+        }
+    </style>
+</head>
+<body style="z-index:-2;background-image: url(photos/tlo.jpg);background-attachment: fixed;background-repeat: no-repeat;background-size:cover;background-position: bottom;">
+    <div style="width:100%;height:100%;z-index:-2;background-image: url(photos/tlo.jpg);background-attachment: fixed;"></div>
+    <div class="top">
+        <div class="MENU">
+            <nav>
+                <ul>
+                    <li><a href="dst.html">Home</a></li>
+                    <li><a href="dst-Rozbitkowie-postaci.html">Postaci</a></li>
+                    <li><a href="dst-Rozbitkowie-postaci.html">Poradiki</a><ul>
+                        <li><a href="link.html">1</a></li>
+                        <li><a href="link.html">2</a></li>
+                        <li><a href="link.html">3</a></li>
+                        <li><a href="link.html">4</a></li>
+                    </ul></li>
+                </ul>
+            </nav>
+        </div>    
+    </div>
+    <div class="body">  
+        <div style="height:60px;width:100%"></div>
+        <p>Witaj na stronie Rozbitkow</p>
+        <div class="rzeczy">
+            <p style="font-size: 30px;">Achivements and Levels</p>
+            <p>Levels:</p>
+            <p>Exp Cap: 1000 exp</p>
+            <p>Points: 3 per level</p>
+            <p>Achivements</p>
+            <p>Cost: 0,75%</p>
+            <p>Reseting lowers max Health</p>
+        </div>
+        <div style="height:20px;width:100%"></div>
+        <div class="rzeczy">
+            <p style="font-size: 30px;">Cluster Plant</p>
+            <p>You can craft 5x5 cluster of plants</p>
+        </div>
+        <div style="height:20px;width:100%"></div>
+        <div class="rzeczy">
+            <p style="font-size: 30px;">Craft from chest</p>
+            <p>You can craft from nearby chests</p>
+        </div>
+        <div style="height:20px;width:100%"></div>
+        <div class="rzeczy">
+            <p style="font-size: 30px;">Craft from chest</p>
+            <p>You can craft from nearby chests</p>
+        </div>
+        <div style="height:20px;width:100%"></div>
+        <div class="rzeczy">
+            <a href="dst-Rozbitkowie-postaci.html">Custom Character changes</a>
+            <p>Walking Cane now gives 50% speed boost from 25 %</p>
+            <p>Fuel Masters now increase the burn time by 2 times instead of 1.5</p>
+        </div>
+        <div style="height:20px;width:100%"></div>
+        <div class="rzeczy">
+            <p style="font-size: 30px;">Extra Equip Slots</p>
+            <p>You have extra backpack slot</p>
+            <p>You have extra amulet slot</p>
+        </div>
+        <div style="height:20px;width:100%"></div>
+        <div class="rzeczy">
+            <p style="font-size: 30px;">Lazy pick up items</p>
+            <p>Falling items will group into one</p>
+        </div>
+        <div style="height:20px;width:100%"></div>
+        <div class="rzeczy">
+            <p style="font-size: 30px;">No food perish on crockpot</p>
+            <p>Food does not perish on craftpots</p>
+        </div>
+        <div style="height:20px;width:100%"></div>
+        <div class="rzeczy">
+            <p style="font-size: 30px;"></p>No Thermal Stone Durability</p>
+            <p>Thermal stone does not have durability</p>
+        </div>
+        <div style="height:20px;width:100%"></div>
+        <div class="rzeczy">
+            <p style="font-size: 30px;">Renewable Graves</p>
+            <p>Graves will renew after full moon</p>
+        </div>
+        <div style="height:20px;width:100%"></div>
+        <div class="rzeczy">
+            <p style="font-size: 30px;">Setpiece Config</p>
+            <p>There are 3 Developer Graveyards</p>
+            <p>There are 3 Living Forests full of Treeguards</p>
+            <p>There are 5 Pig Guards</p>
+            <p>There is always a Reed Trap</p>
+        </div>
+        <div style="height:20px;width:100%"></div>
+        <div class="rzeczy">
+            <p style="font-size: 30px;">Sorting Inventory</p>
+            <p>Clicking X will sort Inventory</p>
+        </div>
+        <div style="height:20px;width:100%"></div>
+        <div class="rzeczy">
+            <p style="font-size: 30px;">Resurrection Shelter</p>
+            <p>Resurrection Shelter has 5 uses</p>
+            <p>Crafting costs:</p>
+            <p>1 Life Giving Amulet</p>
+            <p>5 Nightmare Fuel</p>
+            <p>10 Boards</p>
+        </div>
+        <div style="height:20px;width:100%"></div>
+        <div class="rzeczy">
+            <p style="font-size: 30px;">Personal Chesters</p>
+            <p>Everyone starts with his own Chester</p>
+        </div>
+        <div style="height:60px;width:100%"></div>
+    </div>
+</body>
+</html>
