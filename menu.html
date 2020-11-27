@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu</title>
     <style>
-        .ALL{
+        .body{
             margin-left: auto;
             margin-right: auto;
             min-width: 600px;
@@ -91,25 +91,27 @@
             background-color: white;
             margin: 0 auto;
         }
+        @font-face{
+            font-family:'OctoberCrow';
+            src:url(OctoberCrow.ttf) format('truetype');
+        }
     </style>
 </head>
-<body style="background-color: lightgrey;">
+<body style="z-index:-2;background-image: url(photos/tlo.png);background-attachment: fixed;background-repeat: no-repeat;background-size:cover;background-position: bottom;">
     <div class="top">
         <div class="MENU">
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Home</a></li>
                     <li><a>GAMES</a><ul>
-                        <li><a href="link.html">Don't Starve Together</a></li>
-                        <li><a href="link.html">Minecraft</a></li>
-                        <li><a href="link.html">+Ships game</a></li>
-                        <li><a href="link.html">+Clicker</a></li>
+                        <li><a href="dst.html" style="font-family:OctoberCrow;">Don't Starve Together</a></li>
+                        <li><a href="minecraft.html">Minecraft</a></li>
                     </ul></li>
                 </ul>
             </nav>
         </div>    
     </div>
-    <div class="ALL">
+    <div class="body">
         <div style="height: 60px;width: 100%;"></div>   
         <div class="div1"></div>
 
